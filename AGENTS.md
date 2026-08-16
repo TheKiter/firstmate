@@ -256,6 +256,10 @@ The delivery lifecycle is an always-loaded operational contract; referenced scri
 
 ### Intake and authority
 
+Load `skill-check` before resolving the project or classifying the deliverable.
+It examines the task against every available skill and loads each one whose trigger matches the request, covering design, development workflows, agent operations, GitHub, web, Obsidian, vector search, swarm, and v3 skills.
+Only after skills are loaded, proceed with the normal intake.
+
 Resolve the project independently for every request.
 An explicit project wins, a clear follow-up inherits its referent, and otherwise match the request against the registry, work under way, and project code or README.
 Proceed on one confident match while naming the project in plain language; ask one concise question when multiple or no projects plausibly match.
@@ -521,8 +525,22 @@ It performs guarded fast-forward updates of firstmate and registered secondmate 
 These skills are not captain-invocable; load them only at their precise triggers.
 
 - `bootstrap-diagnostics` - load whenever the session-start digest's bootstrap or network-checks section prints an actionable diagnostic line (`MISSING:`, `MISSING_MANUAL:`, `BACKEND_INVALID:`, `NEEDS_GH_AUTH`, `TANGLE:`, `STARTUP_MEMORY_BUDGET:`, `CREW_DISPATCH: invalid`, `FLEET_SYNC:`, `NETWORK_CHECKS:`, `PR_CHECK_MIGRATION:`, `SECONDMATE_SYNC:`, `SECONDMATE_LIVENESS:`, `SECONDMATE_HANDOFF:`, `NUDGE_SECONDMATES:`, or `FMX:`); silence and `BOOTSTRAP_INFO:` need no load.
+- `agent-knowledge-management` - load when setting up a project knowledge base for an agent, when maintaining an existing second brain that has drifted, when deciding what knowledge to keep vs. archive, and when scaling from personal to multi-user.
+- `agentic-engineering` - load when designing an AI-assisted development workflow, when reviewing whether your current approach is a sustainable system or a fragile loop, and when scoping how to decouple yourself from being in every cycle.
+- `agentic-observability` - load when setting up agent workflows in production, when reviewing agent cost and effectiveness, when debugging agent behavior, and when deciding whether an agent system is actually delivering value.
+- `agentic-security` - load when configuring a new agent harness, before giving an agent access to a production or sensitive environment, when reviewing your agentic setup's security posture, and when choosing between sandboxing approaches.
+- `ai-coding-levels` - load when scoping how autonomous an agent should be for a given task, when deciding whether to stay in the loop or step back, and when evaluating whether your current autonomy level matches your risk tolerance.
 - `diagnostic-reasoning` - load before scoping a reported bug and before acting on a diagnostic report.
+- `app-idea-validation` - load before scoping a new project, before writing a brief for a new build, and when evaluating whether an idea is worth building in its current form.
 - `ask-user-authority` - load before deciding any ask-user finding, regardless of the project's `yolo` posture.
+- `backup` - load at session end, before context compaction, or on `/backup`. Backs up session outcomes to Obsidian vault, GBrain, and git so the next session can pick up without conversation history. Complements `stow` (firstmate tiered memory) by targeting external durable stores.
+- `claude-code-5step` - load when scoping a new feature or app build with Claude Code, when the approach needs more structure than an open-ended session, and when breaking down a large build into manageable steps.
+- `claude-code-cheats` - load when starting a new Claude Code session, when context is running low, when debugging project setup issues, and when reviewing session health.
+- `claude-code-skills` - load when creating new skills for Claude Code or Codex, when designing a development workflow that skills should enforce, and when reviewing whether existing skills are still pulling their weight.
+- `model-fusion` - load when designing multi-model workflows, when optimizing cost across different task types, when reviewing whether you are overpaying by using one model for everything, and when building agent teams with specialized roles.
+- `multi-agent-orchestration` - load when designing multi-agent workflows, when choosing between sub-agent hierarchies and peer-to-peer agent teams, when setting up agent communication channels, and when deciding whether a tool supports programmatic agent control.
+- `open-knowledge-format` - load when building an AI-readable knowledge base, when documenting a project or domain for agent consumption, when sharing knowledge between AI tools, and when designing a second brain that other agents can use.
+- `pi-agent-customization` - load when setting up a new Pi agent, when extending Pi's behavior for a specific task, when building multi-agent workflows in Pi, and when designing custom agent configurations.
 - `quota-array-dispatch` - load before choosing among a matched crew-dispatch profile array from current quota-axi output.
 - `harness-adapters` - load before spawning or recovering a crewmate or secondmate, handling a trust dialog, sending a harness-specific skill invocation, interrupting or exiting an agent, resuming an exited agent, or verifying a new harness adapter.
 - `firstmate-orca` - load before switching to Orca, spawning or supervising Orca-backed work, smoke-testing Orca backend behavior, debugging Orca task state, or reconciling Orca-backed task metadata.
@@ -536,6 +554,9 @@ These skills are not captain-invocable; load them only at their precise triggers
 - `fmx-respond` - load on an `x-mention <request_id>` `check:` wake to handle the mention, on an `x-mode-error ...` `check:` wake to report the Relay configuration blocker, on a `public-followup ...` `check:` wake or a startup-surfaced public commitment, and on any milestone or terminal wake for a Relay-linked task before posting its completion follow-up; relevant only when Relay is on.
 - `firstmate-codexapp` - load before coordinating a visible Codex Desktop thread, evaluating a Codex App backend request, or reconciling Codex Desktop host-tool smoke evidence for Firstmate work.
 - `firstmate-coding-guidelines` - load before changing firstmate's shared, tracked material, as defined by section 1's list, whether editing directly or briefing a crewmate for a firstmate-repo task.
+- `vibe-to-production` - load before deploying a demo or prototype built with AI coding tools, when reviewing a project for production readiness, and when scoping the work between demo and ship.
+- `skill-check` - load at every task intake, before dispatching new work, steering an existing worker, or writing a brief.
+  Examines the task against the complete skill inventory and loads every relevant skill before the worker begins.
 
 ## 14. Relay
 
