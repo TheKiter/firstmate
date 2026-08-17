@@ -1,6 +1,12 @@
 projects/
 state/
-data/
+data/*
+!data/captain.md
+!data/learnings.md
+!data/projects.md
+!data/secondmates.md
+!data/last-session.md
+data/backlog.md
 scratchpad/
 .no-mistakes/
 .lavish/
@@ -10,4 +16,5 @@ scratchpad/
 __pycache__/
 *.pyc
 .env
-config/
+config/*
+!config/startup-memory-budget
