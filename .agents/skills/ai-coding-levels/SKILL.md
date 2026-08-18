@@ -22,6 +22,12 @@ Derived from Dan Shapiro's five levels of AI coding (mapped to self-driving
 car levels) as popularized by Cole Medin. The framework gives a vocabulary
 for where you are and where you should be, which are often different places.
 
+Cole Medin's framing: "Everyone is using AI coding assistance very differently.
+You'd be surprised how large the spectrum is even for companies that use these
+tools to ship production code. The best explanation I found for the different
+ways we can use coding agents is from Dan Shapiro's five levels, from spicy
+autocomplete to the dark factory."
+
 ## The five levels
 
 ### Level 1: Spicy autocomplete

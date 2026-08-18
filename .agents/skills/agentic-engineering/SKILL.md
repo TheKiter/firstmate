@@ -23,6 +23,11 @@ Agentic engineering builds a software factory where workflows replace prompts.
 
 ## Loop engineering vs. Agentic engineering
 
+IndyDevDan is blunt about loop engineering: "Forget about loop engineering.
+It's the wrong way to think about building valuable software with agents at
+scale consistently. Loop engineering is a terrible rebrand of the software
+development life cycle. It's as unclear as it is hype-filled."
+
 **Loop engineering**: you sit in a chat session, iterate on prompts, review
 every output, and manually steer the model back on track. You are the
 control loop. The model is stateless between turns. Every new task starts

@@ -13,14 +13,19 @@ metadata:
 
 # agentic-security
 
-Use when configuring a new agent harness, before giving an agent access to
-a production or sensitive environment, when reviewing your agentic setup's
+Use when configuring a new agent harness, before giving an agent access to a
+production or sensitive environment, when reviewing your agentic setup's
 security posture, and when choosing between sandboxing approaches.
 
 Derived from IndyDevDan's bash security framework and the broader agent
 sandboxing ecosystem. The core principle: risk compounds with runtime.
 Every second an agent has unrestricted shell access increases the
 probability of accidental or exploit-driven damage.
+
+IndyDevDan's framing: "If your agents have a problem, you have a problem.
+There's a tool that every agent has that is an agentic security ticking time
+bomb. 95% of all engineers are one bad prompt away from their agents using
+this tool to cause irreversible production damage. This isn't hypothetical."
 
 ## The bash tool problem
 

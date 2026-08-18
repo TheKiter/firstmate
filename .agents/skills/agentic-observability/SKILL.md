@@ -21,6 +21,12 @@ whether an agent system is delivering value.
 Derived from IndyDevDan's Pi Agent Observability framework and the broader
 principle that an agent you cannot see is an agent you cannot improve.
 
+IndyDevDan's framing: "You're planning a new feature. The first question is:
+what type of spec should you use? You remember the viral post about the
+unreasonable effectiveness of HTML specs by Anthropic engineers. What should
+you use? Markdown specs, HTML specs, or something else?" The observability
+framework answers this by comparing spec types on measurable outcomes.
+
 ## Why observability matters for agents
 
 Most agentic setups are black boxes. A prompt goes in, code comes out, and
@@ -81,6 +87,21 @@ Track quality metrics specific to your domain:
 - Review outcomes (did a reviewer agent pass or fail the output?)
 - Bug rate (how often does output from this workflow introduce bugs?)
 
+## HTML specs vs Markdown specs
+
+IndyDevDan's observability work specifically compares HTML specs against
+Markdown specs for agent-driven development:
+
+- **Markdown specs** are simple, human-readable, and easy to write. They work
+  well for small projects but lack structure for complex multi-agent workflows.
+- **HTML specs** are richer, can include visual design intent alongside
+  functional requirements, and provide a more complete artifact for agents
+  to execute against. They make it easier to track spec compliance.
+
+The recommendation: use HTML specs when a human or verifier agent needs to
+validate output against the spec, because the visual elements make compliance
+checking more reliable.
+
 ## Implementing agent observability
 
 ### Structured logging
@@ -105,10 +126,6 @@ aggregate and analyze across runs.
 Associate every agent run with the spec it was executing against. This lets
 you answer: "Did this spec produce good results across multiple runs?"
 and "Which specs consistently cause agents to fail?"
-
-HTML specs (specs rendered as HTML with visual elements) provide a richer
-artifact for tracking than plain text, because they include design intent
-alongside functional requirements.
 
 ### Dashboards
 

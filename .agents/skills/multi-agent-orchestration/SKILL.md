@@ -23,6 +23,10 @@ Derived from IndyDevDan's Pi-to-Pi and CMUX multi-agent orchestration
 frameworks. The core insight: flat teams beat hierarchy, and agentic access
 (programmatic control) is a hard requirement for any tool in the stack.
 
+IndyDevDan's framing: "What's better than one GPT-5.5 Pi coding agent? You
+guessed it, two GPT-5.5 Pi coding agents. What's better than two isolated
+side-by-side agents? Pi to Pi: two-way agent orchestration."
+
 ## The problem with sub-agent hierarchies
 
 Most multi-agent setups use a strict hierarchy: one master agent delegates

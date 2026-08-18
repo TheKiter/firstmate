@@ -23,11 +23,16 @@ Derived from Google's Open Knowledge Format (OKF) as detailed by Cole Medin.
 OKF is an open standard that formalizes Andrej Karpathy's LLM wiki pattern
 into plain markdown any AI can read with zero integration.
 
+Cole Medin's framing: "Andrej Karpathy released the idea of the LLM wiki.
+It's a pattern for building personal knowledge bases using LLMs and it totally
+took off for good reason. This single markdown document in GitHub called a
+gist got to 40,000 stars. Seriously, you can take this idea and run with it."
+
 ## The problem OKF solves
 
 You have a personal coding agent and a second brain. It works well for you.
-But handing your knowledge to someone else's AI -- or having another AI tool
-use your knowledge -- requires plugins, RAG pipelines, vector databases, and
+But handing your knowledge to someone else's AI — or having another AI tool
+use your knowledge — requires plugins, RAG pipelines, vector databases, and
 integration work. There is no shared format.
 
 OKF is that shared format: plain markdown with a predictable structure that

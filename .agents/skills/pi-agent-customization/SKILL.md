@@ -23,6 +23,13 @@ Derived from IndyDevDan's deep dive into the Pi coding agent (243K views),
 which builds 14 progressively more sophisticated Pi configurations from
 minimal focused agents to full meta-agent orchestration systems.
 
+IndyDevDan's framing: "I found the only true Claude Code competitor and it's
+not what you think. Every single engineer is limited by the tools they use
+because the tools you use shape what you believe is possible. When's the last
+time you asked yourself, 'How is my agentic coding tool limiting me?' You
+need new tools to expand what you can do. Pi is the first viable agent
+harness that challenges Claude Code's dominance."
+
 Pi is open-source, unopinionated, and customizable through hooks, footers,
 widgets, key bindings, tool overrides, and theme cycling. Unlike opinionated
 tools that dictate how you work, Pi gives you a harness and gets out of the

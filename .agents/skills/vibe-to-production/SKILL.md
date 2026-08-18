@@ -19,6 +19,11 @@ metadata:
 Use before deploying a vibe-coded demo, when reviewing for production readiness,
 and when scoping the gap between prototype and ship.
 
+Sean Kochel's framing: "There are two types of vibe coders. The ones that
+actually ship real stuff, and the ones that become the source material for
+all of those vibe coding memes. The difference isn't talent and it's not tools.
+It is the processes they follow and the vocabulary that they have."
+
 The organizing mental model is **gates vs. nets**:
 - **Gates** prevent bad inputs from reaching production in the first place.
   Specs, types, linting, auth, code review.

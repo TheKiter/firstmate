@@ -23,7 +23,11 @@ The system is designed around a single insight: models fail when given a task
 that is too large or too vague. Each step produces the input for the next,
 creating a chain of well-scoped deliverables.
 
-## Step 1: Hand-written PRD
+Sean Kochel demonstrates this system by building a real fitness tracking app
+for a program called Mountain Tough, where PDF-based workout programs are
+parsed into a trackable workout tracker.
+
+## Step 1: Light PRD (hand-written)
 
 Before the AI writes any code, write a Product Requirements Document yourself.
 This step is intentionally manual because the exercise of writing forces
@@ -33,11 +37,17 @@ clarity that no prompt can substitute.
 - List functional requirements: what must the system actually do?
 - List non-functional requirements: performance, platform, constraints.
 - Define the target user and the core workflow.
-- Keep it concise (a single page or markdown file). This is a "light PRD,"
-  not a 50-page document.
-- Save to a `docs/` folder in the project.
+- Use a skill that asks clarifying questions (like Sean's "Light PRD" skill)
+  to traverse a decision tree and resolve ambiguities before building.
+- Keep a log of every decision made during this phase — it becomes a reference
+  for later steps when the model starts to drift.
 
-Output: `docs/prd.md`
+In the demo, Sean's skill asked about the primary user, core pain, platform
+(mobile vs web), PDF format, and parsing error handling before producing the
+PRD. These questions exposed edge cases that would have derailed the build
+if left implicit.
+
+Output: `docs/prd.md` plus a decision log.
 
 ## Step 2: Research
 
@@ -49,7 +59,7 @@ critical constraints.
   domain.
 - Ask about common pitfalls, edge cases, and established patterns.
 - Research the API landscape: what services exist, their pricing, their limits.
-- Document findings alongside the PRD.
+- Generate research questions from the PRD and answer them systematically.
 
 Output: `docs/research.md` with findings, alternatives considered, and
 recommendations.
@@ -83,23 +93,24 @@ that deliver user value independently.
 - Each epic gets acceptance criteria derived from the PRD.
 - Order epics by dependency and user value, not implementation convenience.
 
+Sean's approach: "If you were to think of that initial query, it seemed dialed
+in, but there's actually a lot that comes out of that in terms of decisions
+that need to be made. If I had given this to Claude Code directly, it would
+just be making these decisions and it might not be something we're on board
+with." The epic breakdown forces those decisions into the open.
+
 Output: a set of epic specifications, each with scope, acceptance criteria,
 and dependency ordering.
 
 ## Step 5: Spec-driven implementation loop
 
-For each epic, use a spec-driven tool (OpenSpec, GitHub Speck Kit) to generate
-structured change proposals and implement them in a tight feedback loop.
+For each epic, implement in a tight feedback loop of spec, code, test, commit.
 
-1. **Proposal**: the tool analyzes the epic spec and generates a change
-   proposal detailing what files need to change and how.
-2. **Review**: review the proposal before approving execution. Check that the
-   scope matches the epic and nothing unrelated is being changed.
-3. **Implement**: the AI tool executes the approved changes against a worktree
-   or feature branch.
-4. **Test**: verify the implementation against the epic's acceptance criteria.
-5. **Commit**: commit with a message linked to the epic or spec artifact.
-6. **Repeat**: move to the next epic.
+1. **Spec**: define the implementation plan for one epic.
+2. **Implement**: execute the plan against a worktree or feature branch.
+3. **Test**: verify the implementation against the epic's acceptance criteria.
+4. **Commit**: commit with a message linked to the epic or spec artifact.
+5. **Repeat**: move to the next epic.
 
 Each loop is short (one epic, one change proposal). If the proposal is too
 large, slice the epic smaller.
@@ -110,11 +121,11 @@ Output: implemented, tested, and committed code for each epic.
 
 If a proposal or implementation goes wrong:
 
-- Revert the change in the spec tool (OpenSpec's rollback, git reset).
+- Revert the change (git reset, spec tool rollback).
 - Identify what made the task too big or the spec ambiguous.
 - Re-slice the epic into smaller pieces and re-propose.
 - Never let the model keep building on a drifting foundation. Revert to the
-   last known-good state.
+  last known-good state.
 
 ## References
 
