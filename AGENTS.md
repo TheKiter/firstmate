@@ -557,6 +557,9 @@ These skills are not captain-invocable; load them only at their precise triggers
 - `vibe-to-production` - load before deploying a demo or prototype built with AI coding tools, when reviewing a project for production readiness, and when scoping the work between demo and ship.
 - `skill-check` - load at every task intake, before dispatching new work, steering an existing worker, or writing a brief.
   Examines the task against the complete skill inventory and loads every relevant skill before the worker begins.
+- `youtube-transcript-harvest` - load when the captain asks to harvest a YouTube channel, extract
+  transcripts from specific videos, or turn video content into knowledge artifacts.
+  Uses yt-dlp for subtitle extraction and Whisper on Sparks for GPU transcription.
 
 ## 14. Relay
 

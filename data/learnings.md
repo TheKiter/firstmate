@@ -154,6 +154,24 @@ Full rebrand from "ODS / Osmantic" to "Vibrate Intention / Source":
 **Sun Phase 1:** PR #2 merged (Next.js + shadcn/ui + Google OAuth + dashboard shell). Crewmate torn down.
 **Excelstra secondmate:** Stood down, awaiting handoff of stable Sun build.
 
+## YouTube transcript re-harvest (2026-08-17)
+
+Re-harvested transcripts from 3 YouTube channels and 1 extra video to enrich 14 .agents/skills/ SKILL.md files with genuine transcript-sourced content.
+
+### Source channels and mapping:
+- **Sean Kochel (@iamseankochel):** 4 skills (app-idea-validation, claude-code-5step, claude-code-cheats, vibe-to-production)
+- **IndyDevDan (@indydevdan):** 5 skills (agentic-engineering, model-fusion, multi-agent-orchestration, agentic-observability, agentic-security) + 1 extra video for pi-agent-customization
+- **Cole Medin (@ColeMedin):** 4 skills (ai-coding-levels, open-knowledge-format, claude-code-skills, agent-knowledge-management)
+
+### Extraction method:
+- Used `yt-dlp --write-auto-subs --sub-lang en --skip-download --convert-subs srt` for all 13 videos
+- All transcripts verified: 61K-196K chars each, genuine spoken content confirmed
+- SRT files cleaned of duplicate segments and converted to plain text for analysis
+- Each SKILL.md enriched with direct quotes and framework details from the video transcripts
+
+### Transcript files:
+Stored under `transcripts/` in the firstmate worktree (not tracked in git).
+
 ## Obsidian Vault structure
 ```
 Obsidian Vault/
