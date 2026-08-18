@@ -58,6 +58,27 @@ The primary firstmate checkout lives at a path with spaces (`/Users/robinz.media
 
 The guard does not apply to paths outside the primary checkout (e.g., `/tmp`, `projects/` clones) -- only to the home directory itself.
 
+## Remote configuration (fork workflow)
+
+This repo is a fork of `kunchenguid/firstmate`. The remotes are set up as:
+- `origin` = `TheKiter/firstmate.git` (our fork, push target)
+- `upstream` = `kunchenguid/firstmate.git` (original, read-only)
+
+**Never branch from upstream.** Crewmates should always branch from `origin/main`
+(the fork), not `upstream/main`. Branching from upstream causes PR branches to
+contain upstream-only commits that create merge conflicts when the fork has
+diverged.
+
+Keep the fork in sync:
+```bash
+git fetch upstream
+git rebase upstream/main
+git push origin main
+```
+
+When a PR branch is based on the wrong remote, rebase it onto `origin/main` and
+force push to update the PR.
+
 ## Session Context Recovery
 
 Pi does not persist conversation history across restarts. To recover previous session context:
