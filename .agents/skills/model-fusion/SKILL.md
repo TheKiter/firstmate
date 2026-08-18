@@ -23,7 +23,11 @@ pattern of combining specialized models rather than picking one winner.
 
 ## The fusion mindset: AND, not OR
 
-The AI industry and model vendors want you to pick one model. That is a trap.
+IndyDevDan's core argument: "The AI industry wants one big winner. GPT-5.6
+Sol or Claude Fable 5. I'm not picking one. Picking is the mistake. The
+winning mindset in the age of AI is AND, not OR. Combine compute. Don't
+select."
+
 Different models have different strengths, cost profiles, latency
 characteristics, and capability ceilings. The winning approach is to combine
 them — using each model where it excels and paying for capability only when

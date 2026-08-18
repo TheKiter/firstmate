@@ -22,6 +22,12 @@ Derived from Cole Medin's experience running a 1.9-million-word second brain
 with 10,000 words reaching the agent per session, and his work on scaling
 knowledge from personal markdown folders to multi-user context layers.
 
+Cole Medin's framing: "There are so many guides on the internet for building
+your own second brain. It really is one of the most popular and practical
+use cases for AI. And there are open-source GitHub repos that allow you to
+download a second brain and get it up and running in just a couple hours.
+And no matter what you do, it's going to end up taking a very similar shape."
+
 ## The knowledge rot problem
 
 Every AI second brain has a shelf life. Knowledge drifts as the codebase
@@ -69,7 +75,7 @@ documents to load.
 
 Compression is not the hard part. Keeping the compressed knowledge accurate
 is. Cole Medin's insight: "What reaches the agent every session is about
-10,000 words. Compressing was never the hard part -- keeping those 10,000
+10,000 words. Compressing was never the hard part — keeping those 10,000
 words TRUE is."
 
 ### Curation cadence

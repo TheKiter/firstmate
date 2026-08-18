@@ -17,10 +17,16 @@ Use when creating new skills for Claude Code or Codex, when designing a
 development workflow that skills should enforce, and when reviewing whether
 existing skills are still pulling their weight.
 
-Derived from Cole Medin's actual development process skills -- the folder
+Derived from Cole Medin's actual development process skills — the folder
 he works out of daily for real codebases and enterprise training. These
 skills are minimalistic on purpose: drop them into any project, start from
 zero, or just take the ideas.
+
+Cole Medin's framing: "I haven't written a single line of code myself in
+over a year now. It feels crazy to even say that because I've been an engineer
+my entire life. When I started my YouTube channel, I was showing you line by
+line how to build AI agents. But now, I lean on AI coding assistants for
+every single part of my development process."
 
 ## The development process as skills
 

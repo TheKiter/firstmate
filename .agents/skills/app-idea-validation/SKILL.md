@@ -17,9 +17,10 @@ Use this before scoping a new project or writing a brief for a new build.
 It helps separate genuine product instincts from premature implementation ideas.
 
 This skill is adapted from Mark Pincus's (Zynga founder) "Proven Better New"
-framework, originally developed for evaluating game and social-product ideas.
-The core insight: most new things fail, so build where demand is already proven,
-then make it better, then add genuinely new angles as experiments.
+framework, originally developed for evaluating game and social-product ideas
+at Zynga (FarmVille, Zynga Poker). The core insight: most new things fail,
+so build where demand is already proven, then make it better, then add
+genuinely new angles as experiments.
 
 ## The framework: Proven Better New
 
@@ -34,6 +35,10 @@ Is there already established demand in this space?
 - Can you point to real competitors or adjacent products that have traction?
 - What is the established baseline you are comparing yourself to?
 
+Sean Kochel's take: "If you're going to try to build a product, you should be
+building in an area that is already proven. It has built-in demand. People
+already pay for something like this. There is an established baseline."
+
 If there is no proven demand, the idea needs significantly more investment to
 educate the market. The framework considers this the highest-risk path.
 
@@ -47,6 +52,10 @@ What specific frustrations or gaps exist in the current proven solutions?
 - Can you make one specific thing meaningfully better without making everything
   else worse?
 
+Zynga's example: FarmVille took proven farming simulators and made the art
+meaningfully better than competitors. Zynga Poker took proven poker games and
+removed the friction of downloading a client by making it browser-based.
+
 "Better" should be concrete and measurable, not a general claim of superiority.
 Frame it as: "Users of X are frustrated by Y, and here is how we fix that."
 
@@ -59,6 +68,10 @@ What genuinely novel angle can you add on top of proven-and-better?
 - Each new angle should be testable independently.
 - Accept that most new angles will not work; the portfolio matters.
 
+Zynga added a social element to FarmVille (friends visiting your farm) and
+social profile pictures to Zynga Poker's tables. These were experiments that
+became their unique wedge.
+
 Place your bets on new angles, but build on the proven base.
 
 ## Instincts vs. Ideas
@@ -68,10 +81,15 @@ something should exist, a process is painful. The difference between winning
 and losing is how that instinct translates into a concrete, buildable idea.
 
 - An **instinct** is a shared recognition that a problem exists.
-  "Tracking workout progress from video comments is terrible."
+  "I shouldn't have to walk out in the street to hail a taxi."
 - An **idea** is a specific, opinionated implementation.
-  "An app that parses weekly PDF exercise programs into a trackable workout
-  tracker with progressive overload tracking."
+  "An app where any person who wants to can become a taxi driver."
+
+As Sean Kochel explains: "When Uber came out, there were a million people
+saying 'I had that same idea!' No, you had the same instinct. You had an
+instinct that you shouldn't have to sit on a corner in the rain hailing a
+cab. But your implementation might have been SMS Taxi, which never got off
+the ground. Uber did something entirely different."
 
 When evaluating an idea, check whether it is one plausible implementation of
 the instinct or the only possible one. If the instinct is sound but the idea
@@ -81,18 +99,22 @@ is narrow, the framework helps find the better expression of that instinct.
 
 When scoping an AI-assisted project:
 
-1. State the **proven** market or category with at least one real competitor or
+1. **State the proven** market or category with at least one real competitor or
    adjacent product. If you cannot name one, stop and research first.
-2. Define the **better** in concrete, testable terms.
+2. **Define the better** in concrete, testable terms.
    "Faster" or "cheaper" is not testable unless quantified.
-3. List the **new** angles as explicit bets, not requirements.
+3. **List the new** angles as explicit bets, not requirements.
    Tag each as "experiment" in the spec.
-4. Distinguish the **instinct** (the problem) from the **idea** (the solution).
+4. **Distinguish the instinct** (the problem) from the idea (the solution).
    If the instinct sounds right but the idea feels off, try a different
    expression of the same instinct before abandoning the problem.
-5. Write the brief as: proven market + better delta + new experiments.
+5. **Write the brief** as: proven market + better delta + new experiments.
    The build scope is the proven and better parts; new angles are optional
    post-MVP additions.
+
+The skill also supports two modes of feedback: **blunt mode** (direct,
+no-sugarcoating evaluation) and **professional mode** (diplomatic and
+constructive). Choose based on how much directness the team needs.
 
 ## References
 

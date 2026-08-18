@@ -18,12 +18,14 @@ debugging setup or tool issues, and when reviewing session health.
 
 These commands are built into Claude Code and require no skills or plugins.
 They are most valuable for keeping sessions productive without blowing through
-context budgets.
+context budgets. As Sean Kochel explains, "Most vibe coders think they need
+complicated tools or a mountain of skills to build something they'd be proud
+of, but the reality is you just need some simple tools executed really well."
 
 ## /checkup (also /doctor)
 
 Audits the current session's configuration and setup before any real work
-begins.
+begins. Sean calls this "the newest of the bunch" among Claude Code commands.
 
 Checks these parameters:
 - **General setup health**: are there broken config files, dangling install
@@ -37,6 +39,11 @@ Checks these parameters:
   session. Move project-specific skills local.
 - **Context budget usage**: what percentage of the context window is consumed
   by setup vs. actual work?
+
+Sean's warning: "When you're installing all of these different skills and MCP
+servers, those things are going to clog up your context window. They get loaded
+in by default, especially if installed globally. They get used and passed in
+every single chat and can take up a huge portion of your context."
 
 Run `/checkup` at the start of every new project session. It prevents the
 common pattern of blowing through a context budget on configuration overhead
