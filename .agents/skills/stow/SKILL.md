@@ -201,6 +201,11 @@ A local skill exists only in this home, so offloading an entry out of `data/capt
      Use `--archive-body` when recoverability matters.
      Never append.
    - File each undone next step as a queued backlog item with a genuine `blocked-by` dependency when applicable.
+   - For durable cross-session facts (key decisions, patterns, gotchas, infrastructure, client context), write to **GBrain** via `gbrain remember "fact" --provenance "stow <date> <topic>"` so future sessions can query them.
+     One focused fact per command, with provenance tracking. Skip facts already preserved by a stronger owner or already present in GBrain.
+   - **Ingest durable knowledge into the wiki** (`~/Documents/Obsidian Vault/wiki/`) following the procedures in `wiki/_schema.md`.
+     For each significant finding: read the existing wiki pages, update relevant concept/source pages or create new ones, update `index.md`, and append to `log.md`.
+     The wiki is the canonical curated knowledge store; GBrain is the agent-queryable vector index on top of it.
 4. **Use inspect-then-update.**
    For every retained fact, ask which current statement it supersedes, whether it can be a one-sentence rewrite, and whether a stale entry should be refreshed, archived, or routed to an existing stronger owner.
    The only graduation moves are promotion to tracked shared material through a PR, folding a learning into the captain-preference destination selected by AGENTS.md, archiving a stale entry to `data/memory-archive.md`, autonomous offload of an eligible non-pinned conditional entry to an already-existing allowed owner through the reduce flow above, captain-approved offload of a pinned durable conditional entry to a JIT-loaded owner executed through the migration step above, or deletion of an entry that is a duplicate or already preserved through a stronger existing owner.
@@ -235,7 +240,8 @@ Report the outcome in plain captain-facing language with all of these facts:
 
 - effective startup-memory budget and total estimated tokens before and after;
 - one or more actions for each of `data/captain.md`, `data/captain-shared.md`, and `data/learnings.md`, using only `unchanged`, `added`, `rewritten`, `pruned`, `routed`, `archived`, or `proposed-offload`; adding or replacing a migration marker is `rewritten`, never a new action verb such as `migrated`;
-- each durable finding filed outside memory and its authoritative owner;
+- one or more actions for **GBrain** (`gbrain-facts`) and the **Wiki** (`wiki-ops`), using `added`, `updated`, `unchanged`, or `skipped` for wiki pages and `ingested`, `linted`, or `queried` for wiki operations;
+- each durable finding filed outside memory and its authoritative owner (including GBrain fact IDs and wiki page paths);
 - each archived entry's reason, each autonomous offload's live destination and actual relief, and, when a pinned candidate was proposed, the `proposed-offload` section with every candidate's fields;
 - every unresolved exception, including a primary-owned shared-file constraint in a secondmate home, and every concrete captain decision opened for an over-budget result;
 - each open record this pass filed or corrected, and each one it deliberately left alone with the judgment it is waiting on;

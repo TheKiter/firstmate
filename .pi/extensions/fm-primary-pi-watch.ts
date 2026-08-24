@@ -483,6 +483,16 @@ export default function (pi: ExtensionAPI) {
     if (generation.stopping) generation = createGeneration();
     activateGeneration(generation);
     markLoaded();
+    // Attempt to re-arm the watcher on session start.
+    // On /new within the same Pi process, the session lock still matches this
+    // PID so startArm succeeds immediately. On a full Pi restart the lock is
+    // stale (old PID is gone), so schedule one deferred retry to give the
+    // session-start script time to claim it before relying on the turn-end guard.
+    const armResult = startArm(generation);
+    if (!armResult.ok && /no live session holds the lock/.test(armResult.message)) {
+      const timer = setTimeout(() => { startArm(generation); }, 1500);
+      timer.unref();
+    }
   });
   pi.on?.("session_shutdown", () => {
     stopGeneration(generation);
